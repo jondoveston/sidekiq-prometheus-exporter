@@ -17,6 +17,6 @@ addons:
 cache: bundler
 before_install:
   - gem install bundler -v 1.16.5
-  - ruby "puts Gem::Version.new(RUBY_VERSION) < Gem::Version.new('2.2.2')"
+  - ruby -e "puts Gem::Version.new(RUBY_VERSION) < Gem::Version.new('2.2.2')"
 after_success: bundle exec codeclimate-test-reporter
 script: bundle exec rake spec
